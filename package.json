@@ -1,0 +1,32 @@
+{
+ "name": "vue-obj-install",
+ "version": "1.0.0",
+ "author": "Sebastian Kaźmierczak <moques93@gmail.com>",
+ "license": "MIT",
+ "description": "A simple function for install your script/variables/objects/functions/... into global Vue object.",
+ "keywords": [
+  "vue",
+  "install"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/MoQuEs/vue-obj-install.git"
+ },
+ "bugs": "https://github.com/MoQuEs/vue-obj-install/issues",
+ "main": "dist/vue-obj-install.min.js",
+ "scripts": {
+  "test": "echo \"There is currently no test case for this plugin\" && exit 1",
+  "build": "npm run _es2015 & npm run _minify",
+  "_es2015": "babel ./src/index.js  --presets es2015 --out-file ./dist/vue-obj-install.es5.js",
+  "_minify": "babel ./src/index.js  --presets minify --out-file ./dist/vue-obj-install.min.js"
+ },
+ "peerDependencies": {
+  "vue": ">= 2.0.0"
+ },
+ "devDependencies": {
+  "babel-cli": "^6.26.0",
+  "babel-core": "^6.26.3",
+  "babel-preset-es2015": "^6.24.1",
+  "babel-preset-minify": "^0.4.3"
+ }
+}
